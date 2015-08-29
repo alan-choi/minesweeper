@@ -3,6 +3,8 @@ require './tile'
 
 class Game
 
+  attr_reader :board
+
   def initialize
     @board = Board.new
   end
@@ -20,6 +22,7 @@ class Game
     case action
     when "r"
       @board[row, col].revealed = true
+      @board.check_tile(row,col)
     when "f"
       @board[row, col].is_flagged = true
     when "u"

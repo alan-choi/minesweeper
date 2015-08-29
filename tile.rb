@@ -45,8 +45,4 @@ class Tile
     end
   end
 
-  def reveal_more
-
-  end
-
 end
